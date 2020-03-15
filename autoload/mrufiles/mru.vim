@@ -9,7 +9,7 @@ let s:mrufiles_exclude_filetypes = ['fugitive', 'git', 'gitcommit', 'gitblame', 
 let s:mrufiles_cache_file = mrufiles#cache#file('mrufiles.txt')
 
 function! mrufiles#mru#import_oldfiles() abort
-    let oldfiles = filter(v:oldfiles, 'filereadable(v:val)')
+    let oldfiles = filter(copy(v:oldfiles), 'filereadable(v:val)')
     return oldfiles
 endfunction
 
