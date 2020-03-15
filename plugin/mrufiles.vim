@@ -3,6 +3,7 @@
 
 augroup MRUFilesSetup
     autocmd!
+    autocmd VimEnter * call mrufiles#mru#load()
     autocmd VimEnter * call mrufiles#finder#fzf#init()
     autocmd VimEnter * call mrufiles#finder#clap#init()
     autocmd VimEnter * call mrufiles#finder#quickfix#init()
