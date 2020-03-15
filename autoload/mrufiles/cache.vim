@@ -6,10 +6,11 @@ set cpoptions&vim
 
 let s:path_separator = has('win32') ? '\' : '/'
 let s:mrufiles_cache_directory = get(g:, 'mrufiles_cache_directory', '')
+let s:mrufiles_share_same_cache = get(g:, 'mrufiles_share_same_cache', 0)
 
 function! mrufiles#cache#directory() abort
     if empty(s:mrufiles_cache_directory)
-        if has('nvim')
+        if has('nvim') && !s:mrufiles_share_same_cache
             let user_cache = stdpath('cache')
         elseif exists('$XDG_CACHE_HOME')
             let user_cache = $XDG_CACHE_HOME
