@@ -1,0 +1,63 @@
+*mrufiles.txt*  Most recent used (MRU) files support for Vim.
+
+Author:  Mark Wu <markplace@gmail.com>
+Repo:    https://github.com/markwu/vim-mrufiles
+License: GPL3
+
+===============================================================================
+INTRODUCTION                                        *mrufiles-introduction*
+
+Vim-mrufiles is a plugin to maintain and access your most recent used (MRU)
+files. The plugin alsoprovides several ways to access MRU files, including
+quickfix, fzf and clap finder.
+
+===============================================================================
+COMMAND                                             *mrufiles-command*
+
+:MRUFiles                                           *MRUFiles*
+    List the MRU files list into the quickfix.
+
+===============================================================================
+GLOBAL OPTIONS                                      *mrufiles-options*
+
+g:mrufiles_max_entries                              *g:mrufiles_max_entries*
+
+    Default: 100
+
+    The maximal entries of moise recent used files.
+
+g:mrufiles_cache_directory                          *g:mrufiles_cache_directory*
+
+    Default: Undefined
+
+    This variable controls the cache directory of mrufiles. By default, the
+    cache directory will decide by the following order:
+
+    1. If has('nvim'), use `stdpath('cache')/mrufiles`
+    2. If has `$XDG_CACHE_HOME`, use `$XDG_CACHE_HOME/mrufiles`
+    3. Otherwise use `$HOME/.cache/mrufiles`
+
+    Set another directory as the cache directory of mrufiles:
+>
+    let g:clap_cache_directory = $HOME . '/.vim/cache/clap'
+
+g:mrufiles_share_same_cache                         *g:mrufiles_share_same_cache*
+
+    Default: 0
+
+    You can allow Vim, NeoVim and Macvim use the same most recent used files,
+    instead of different for each other.
+
+===============================================================================
+FZF FINDER                                          *murfiles-fzf*
+
+:FzfMruFiles                                        *fzf-mrufiles*
+
+    Fzf finder for most recent used (MRU) files.
+
+===============================================================================
+CLAP FINDER                                         *mrufiles-clap*
+
+:Clap mrufiles                                      *clap-mrufiles*
+
+    Clap finder for most recent used (MRU) files.
