@@ -1,12 +1,12 @@
+FzfMruFiles	mrufiles.txt	/*FzfMruFiles*
 MRUFiles	mrufiles.txt	/*MRUFiles*
 clap-mrufiles	mrufiles.txt	/*clap-mrufiles*
 fzf-mrufiles	mrufiles.txt	/*fzf-mrufiles*
 g:mrufiles_cache_directory	mrufiles.txt	/*g:mrufiles_cache_directory*
 g:mrufiles_max_entries	mrufiles.txt	/*g:mrufiles_max_entries*
 g:mrufiles_share_same_cache	mrufiles.txt	/*g:mrufiles_share_same_cache*
-mrufiles-clap	mrufiles.txt	/*mrufiles-clap*
 mrufiles-command	mrufiles.txt	/*mrufiles-command*
 mrufiles-introduction	mrufiles.txt	/*mrufiles-introduction*
 mrufiles-options	mrufiles.txt	/*mrufiles-options*
 mrufiles.txt	mrufiles.txt	/*mrufiles.txt*
-murfiles-fzf	mrufiles.txt	/*murfiles-fzf*
+quickfix-mrufiles	mrufiles.txt	/*quickfix-mrufiles*

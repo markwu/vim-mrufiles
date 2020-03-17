@@ -12,12 +12,6 @@ files. The plugin alsoprovides several ways to access MRU files, including
 quickfix, fzf and clap finder.
 
 ===============================================================================
-COMMAND                                             *mrufiles-command*
-
-:MRUFiles                                           *MRUFiles*
-    List the MRU files list into the quickfix.
-
-===============================================================================
 GLOBAL OPTIONS                                      *mrufiles-options*
 
 g:mrufiles_max_entries                              *g:mrufiles_max_entries*
@@ -49,14 +43,16 @@ g:mrufiles_share_same_cache                         *g:mrufiles_share_same_cache
     instead of different for each other.
 
 ===============================================================================
-FZF FINDER                                          *murfiles-fzf*
+COMMAND                                             *mrufiles-command*
+
+:MRUFiles                                           *quickfix-mrufiles*
+                                                    *MRUFiles*
+    List the MRU files list into the quickfix.
 
 :FzfMruFiles                                        *fzf-mrufiles*
+                                                    *FzfMruFiles*
 
     Fzf finder for most recent used (MRU) files.
-
-===============================================================================
-CLAP FINDER                                         *mrufiles-clap*
 
 :Clap mrufiles                                      *clap-mrufiles*
 
