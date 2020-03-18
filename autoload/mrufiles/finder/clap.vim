@@ -4,11 +4,17 @@
 let s:save_cpo = &cpoptions
 set cpoptions&vim
 
+function! mrufiles#finder#clap#preview() abort
+    let line = g:clap.display.getcurline()
+    call clap#preview#file(g:clap.display.getcurline())
+endfunction
+
 function! mrufiles#finder#clap#init() abort
     if exists('g:loaded_clap') && g:loaded_clap == 1
         let g:clap#provider#mrufiles# = {
                     \ 'source': function('mrufiles#mru#get'),
-                    \ 'sink': 'edit'
+                    \ 'sink': 'edit',
+                    \ 'on_move': function('mrufiles#finder#clap#preview')
                     \ }
     endif
 endfunction
