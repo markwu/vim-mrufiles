@@ -6,13 +6,13 @@ set cpoptions&vim
 
 function! mrufiles#finder#fzf#open() abort
     let preview = fzf#vim#with_preview()
-    let fzf_mru_finders = {
+    let s:mrufiles_finder_fzf_options = {
                 \   'source'  : mrufiles#mru#get(),
                 \   'sink'    : 'edit',
                 \   'options' : ['--multi', '--prompt', 'MruFiles> '] + preview.options
                 \ }
 
-    call fzf#run(fzf#wrap(fzf_mru_finder))
+    call fzf#run(fzf#wrap(s:mrufiles_finder_fzf_options))
 endfunction
 
 function! mrufiles#finder#fzf#init() abort
