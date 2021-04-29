@@ -21,11 +21,7 @@ function! s:provider.on_move() abort
 endfunction
 
 
-function! mrufiles#finder#clap#init() abort
-    if exists('g:loaded_clap') && g:loaded_clap == 1
-        let g:clap#provider#mrufiles# = s:provider
-    endif
-endfunction
+let g:clap#provider#mrufiles# = s:provider
 
 let &cpoptions = s:save_cpo
 unlet s:save_cpo
